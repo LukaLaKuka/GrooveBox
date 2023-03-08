@@ -3,9 +3,7 @@
   # Anteproyecto - GrooveBox
 
   <div align="center">
-  
-  <img src="../../assets/img/Groove.png" width="75%">
-  
+    <img src="../../assets/img/Groove.png" alt="Logo de GrooveBox" width="35%">
   </div>
   
   ## Índice
@@ -43,7 +41,5 @@
   ![Boceto Solución](../../assets/img/BocetoSolucion.png)
 
   </div>
-
-</div>
 
 </div>
