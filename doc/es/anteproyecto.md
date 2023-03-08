@@ -10,10 +10,10 @@
   
   ## Índice
 
-  [Descripción del problema](#descripción-del-problema)
-  [Objetivo](#objetivo)
-  [Arquitectura y tecnologías a utilizar]()
-
+  - [Descripción del problema](#descripción-del-problema)
+  - [Objetivo](#objetivo)
+  - [Arquitectura y tecnologías a utilizar](#arquitectura-y-tecnologías-a-utilizar)
+  - [Boceto de la solución](#boceto-de-la-solución)
   
   ### Descripción del problema.
 
