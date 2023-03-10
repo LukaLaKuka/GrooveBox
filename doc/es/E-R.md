@@ -98,6 +98,7 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 | description | VARCHAR(5000) NOT NULL         | Descripción de la Tracklist |
 | privacy     | BOOLEAN                        | Privacidad de la Tracklist  |
 | image       | CHAR(90) NOT NULL              | Imagen de la Tracklist      |
+| userID      | FOREIGN KEY Usuarios           | Dueño de la Tracklist       |
 
 
 #### Usuario - Tracklist
