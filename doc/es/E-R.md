@@ -96,7 +96,7 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 | ID          | INT AUTO_INCREMENT PRIMARY KEY | ID de la Tracklist          |
 | name        | CHAR(30) NOT NULL              | Nombre de la Tracklist      |
 | description | VARCHAR(5000) NOT NULL         | Descripción de la Tracklist |
-| privacy     | CHAR(1) NOT NULL               | Privacidad de la Tracklist  |
+| privacy     | BOOLEAN                        | Privacidad de la Tracklist  |
 | image       | CHAR(90) NOT NULL              | Imagen de la Tracklist      |
 
 
@@ -118,7 +118,7 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 | image       | VARCHAR(90) NOT NULL           | Imagen de la Mezcla        |
 | audio       | VARCHAR(90) NOT NULL           | Audio de la Mezcla         |
 | author      | FOREIGN KEY Usuario            | Autor de la Mezcla         |
-| privacy     | CHAR(1) NOT NULL               | Privacidad de la Tracklist |
+| privacy     | BOOLEAN                        | Privacidad de la Tracklist |
 
 
 #### Usuario - Mezcla
