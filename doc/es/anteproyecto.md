@@ -24,12 +24,12 @@
   
   ### Arquitectura y tecnologías a utilizar.
   
-  GrooveBox se constará de cuatro servicios. Un servicio para la plataforma web desarrollada en Angular, que consume de un servicio de API REST desarrollado en Laravel (versión a determinar) que este a su vez consume de un servidor de archivos de Amazon Web Service S3 y un Servidor de Base de Datos MYSQL. El servicio API REST puede ser consumido por los usuarios directamente mediante tokens. Cada servicio sería desplegado con Docker exceptuando el de Amazon, que estaría desplegado directamente por Amazon.
+  GrooveBox se constará de cuatro servicios. Un servicio para la plataforma web desarrollada en Laravel junto al framework Livewire, que consume de un servicio de un servidor de archivos de Amazon Web Service S3 y un Servidor de Base de Datos MYSQL. También los desarrolladores tendrán opción a consumir un servicio API REST mediante tokens. Cada servicio sería desplegado con Docker exceptuando el de Amazon, que estaría desplegado directamente por Amazon.
 
   #### Tecnologías
 
   - Docker
-  - Angular JS (TypeScript)
+  - Livewire
   - Laravel (PHP)
   - AWS S3
   - MySQL Server
