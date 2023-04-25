@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/grooveBox" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/backend/grooveAPI/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/src/backend/grooveAPI/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/src/backend/grooveAPI/vendor/facade/flare-client-php" />
