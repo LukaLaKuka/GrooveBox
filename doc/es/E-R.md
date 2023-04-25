@@ -19,19 +19,19 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 
 ### Entidades
 
-| Entidad     | Tokens                                                       |
-|-------------|--------------------------------------------------------------|
-| Descripción | Token único para el usuario, para solicitudes a la API REST. |
-| Relaciones  | Un **Token** pertenece a un único **Usuario**.               |
-| Autor       | [Tomhuel](https://github.com/Tomhuel)                        |
-| Fecha       | 10/03/2023                                                   |
+| Entidad     | Artist                                                                                                   |
+|-------------|----------------------------------------------------------------------------------------------------------|
+| Descripción | Perfil de artista del usuario.                                                                           |
+| Relaciones  | Un **Artista** pertenece solo a un único **Usuario**. Un Artista puede tener producidas 0 o más mezclas. |
+| Autor       | [Tomhuel](https://github.com/Tomhuel)                                                                    |
+| Fecha       | 25/03/2023                                                                                               |
 
-| Entidad     | Usuario                                                               |
-|-------------|-----------------------------------------------------------------------|
-| Descripción | Usuario de la plataforma.                                             |
-| Relaciones  | Un **Usuario** tiene un sólo **Token**, tiene 0 o más **Tracklists**. |
-| Autor       | [Tomhuel](https://github.com/Tomhuel)                                 |
-| Fecha       | 10/03/2023                                                            |
+| Entidad     | User                                                                                                                |
+|-------------|---------------------------------------------------------------------------------------------------------------------|
+| Descripción | Usuario de la plataforma.                                                                                           |
+| Relaciones  | Un **Usuario** tiene un sólo perfil de **Artista**, tiene 0 o más **Tracklists**. Le pueden gustar 0 o más mezclas. |
+| Autor       | [Tomhuel](https://github.com/Tomhuel)                                                                               |
+| Fecha       | 10/03/2023                                                                                                          |
 
 | Entidad     | Tracklist                                                                                                                 |
 |-------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -40,12 +40,12 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 | Autor       | [Tomhuel](https://github.com/Tomhuel)                                                                                     |
 | Fecha       | 10/03/2023                                                                                                                |
 
-| Entidad     | Mezcla                                                                                                |
-|-------------|-------------------------------------------------------------------------------------------------------|
-| Descripción | Mezcla es el audio que se usa para _mezclar_ con otro audio y con ello generar otra mezcla.           |
-| Relaciones  | Una **Mezcla** puede estar en 0 o más **Tracklists**. Una **Mezcla** puede tener 0 o más **Géneros**. |
-| Autor       | [Tomhuel](https://github.com/Tomhuel)                                                                 |
-| Fecha       | 10/03/2023                                                                                            |
+| Entidad     | Mezcla                                                                                                                                                                                  |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Descripción | Mezcla es el audio que se usa para _mezclar_ con otro audio y con ello generar otra mezcla.                                                                                             |
+| Relaciones  | Una **Mezcla** puede estar en 0 o más **Tracklists**. Una **Mezcla** puede tener 0 o más **Géneros**. Una Mezcla puede ser gustada por 0 o más usuarios y producida por un solo artista |
+| Autor       | [Tomhuel](https://github.com/Tomhuel)                                                                                                                                                   |
+| Fecha       | 10/03/2023                                                                                                                                                                              |
 
 | Entidad     | Género                                                   |
 |-------------|----------------------------------------------------------|
@@ -58,7 +58,7 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 
 | Entidad 1 | Relación | Entidad 2 | Descripción                                                                                              |
 |-----------|----------|-----------|----------------------------------------------------------------------------------------------------------|
- | Usuario   | Tiene    | Token     | Un Usuario tiene un solo Token, y un Token solo pertenece a un Usuario                                   |
+ | Usuario   | Tiene    | Artista   | Un Usuario tiene un solo perfil de Artista y un perfil de Artista solo pertenece a un único Usuario      |
 | Usuario   | Tiene    | Tracklist | Un Usuario puede tener 0 o más Tracklists, y una Tracklist solo puede pertenecer a un Usuario            |
 | Usuario   | Tiene    | Mezcla    | Un Usuario le pueden gustar 0 o más mezclas, y una mezcla puede ser gustada por 0 o más Usuarios         |
 | Tracklist | Tiene    | Mezcla    | Una Tracklist puede tener 0 o más Mezclas, mientras que una Mezcla puede pertenecer a 0 o más Tracklists |
@@ -78,15 +78,16 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 | username        | CHAR(30) NOT NULL              | Apodo del Usuario              |
 | email           | CHAR(50) NOT NULL              | Correo electrónico del Usuario |
 | password        | CHAR(50) NOT NULL              | Contraseña del Usuario         |
-| token           | FOREIGN KEY Token              | Token del Usuario              |
-| image           | CHAR(90) NOT NULL              | Imagen del Usuario             |
+| image           | CHAR(90)                       | Imagen del Usuario             |
 
-#### Token
+#### Artist
 
-| Campo | Tipo de Dato                   | Dato a almacenar |
-|-------|--------------------------------|------------------|
-| ID    | INT AUTO_INCREMENT PRIMARY KEY | ID del Token     |
-| token | CHAR(50) NOT NULL              | Valor del Token  |
+| Campo       | Tipo de Dato                   | Dato a almacenar   |
+|-------------|--------------------------------|--------------------|
+| ID          | INT AUTO_INCREMENT PRIMARY KEY | ID del Artista     |
+| artist_name | CHAR(30) NOT NULL              | Nombre del artista |
+| image       | CHAR(30)                       | Imagen del artista |
+| user_id     | FOREIGN KEY Usuarios NOT NULL  | ID del usuario     |
 
 
 #### Tracklist
@@ -101,14 +102,6 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 | userID      | FOREIGN KEY Usuarios           | Dueño de la Tracklist       |
 
 
-#### Usuario - Tracklist
-
-| Campo   | Tipo de Dato                   | Dato a almacenar   |
-|---------|--------------------------------|--------------------|
-| userID  | FOREIGN KEY Usuario NOT NULL   | ID del Usuario     |
-| tlistID | FOREIGN KEY Tracklist NOT NULL | ID de la Tracklist |
-
-
 #### Mezcla
 
 | Campo       | Tipo de Dato                   | Dato a almacenar           |
@@ -118,7 +111,7 @@ Aquí podrás el diagrama Entidad-Relación y además la documentación de sus E
 | description | VARCHAR(5000) NOT NULL         | Descripción de la Mezcla   |
 | image       | VARCHAR(90) NOT NULL           | Imagen de la Mezcla        |
 | audio       | VARCHAR(90) NOT NULL           | Audio de la Mezcla         |
-| author      | FOREIGN KEY Usuario            | Autor de la Mezcla         |
+| author      | FOREIGN KEY Artist             | Autor de la Mezcla         |
 | privacy     | BOOLEAN                        | Privacidad de la Tracklist |
 
 
