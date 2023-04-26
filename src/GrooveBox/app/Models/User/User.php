@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace app\Models\User;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use app\Models\Artist\Artist;
+use app\Models\Mix\Mix;
+use App\Models\Tracklist\Tracklist;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -41,4 +43,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function artist() {
+        return $this->hasOne(Artist::class);
+    }
+
+    public function mixes() {
+        return $this->belongsToMany(Mix::class);
+    }
+
+    public function tracklists() {
+        return $this->hasMany(Tracklist::class);
+    }
 }
