@@ -2,8 +2,8 @@
 
 namespace app\Models\Tracklist;
 
-use app\Models\Mix\Mix;
-use app\Models\User\User;
+use App\Models\Mix\Mix;
+use App\Models\User\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
