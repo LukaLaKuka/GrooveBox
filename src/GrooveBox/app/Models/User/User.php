@@ -1,14 +1,15 @@
 <?php
 
-namespace app\Models\User;
+namespace App\Models\User;
 
-use app\Models\Artist\Artist;
-use app\Models\Mix\Mix;
+use App\Models\Artist\Artist;
+use App\Models\Mix\Mix;
 use App\Models\Tracklist\Tracklist;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable
 {
@@ -59,5 +60,15 @@ class User extends Authenticatable
 
     public function tracklists() {
         return $this->hasMany(Tracklist::class);
+    }
+
+    public function hasArtist() {
+
+        $hasArtist = Artist::where('user_id', $this->id)->exists();
+
+        if ($hasArtist) {
+            return true;
+        }
+        return false;
     }
 }
