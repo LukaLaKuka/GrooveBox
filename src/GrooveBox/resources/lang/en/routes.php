@@ -5,7 +5,7 @@ return [
     "login" => "login",
     "register" => "register",
     "mixes" => "mixes",
-    "mix" => "mixes/{mixId}",
+    "mix" => "mix/{mixId}",
     "new-mix" => "new-mix",
     "update-mix" => "update-mix/{mixId}",
     "tracklists" => "tracklists",
@@ -18,4 +18,8 @@ return [
     "artist-update" => "update-artist",
     "search" => "search",
     "settings" => "settings",
+    "favorites-mixes" => "like",
+    "personal-mixes" => "your-mixes",
+    "personal-tracklists" => "personal-tracklists",
+    'add-mix-to-tracklists' => "add-mix-to-tracklists/{mixId}"
 ];
