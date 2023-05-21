@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Models\Genre;
+namespace App\Models\Genre;
 
 use app\Models\Mix\Mix;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
