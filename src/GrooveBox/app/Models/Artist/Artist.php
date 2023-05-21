@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Models\Artist;
+namespace App\Models\Artist;
 
 use app\Models\Mix\Mix;
 use app\Models\User\User;
