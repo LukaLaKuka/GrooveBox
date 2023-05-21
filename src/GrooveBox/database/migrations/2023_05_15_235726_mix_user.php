@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Likes extends Migration
+class MixUser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class Likes extends Migration
      */
     public function up()
     {
-        Schema::create('likes', function (Blueprint $table) {
+        Schema::create('mix_user', function (Blueprint $table) {
 
             $table->id();
 
-            $table->unsignedBigInteger('mix_id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('mix_id');
 
             $table->foreign('user_id')
                 ->references('id')
