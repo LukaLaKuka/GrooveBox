@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Models\Tracklist;
+namespace App\Models\Tracklist;
 
 use App\Models\Mix\Mix;
 use App\Models\User\User;
@@ -26,5 +26,14 @@ class Tracklist extends Model
 
     public function mixes() {
         return $this->belongsToMany(Mix::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($mix) {
+            $mix->mixes()->detach();
+        });
     }
 }
