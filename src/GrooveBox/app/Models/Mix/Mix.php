@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Models\Mix;
+namespace App\Models\Mix;
 
-use app\Models\Artist\Artist;
+use App\Models\Artist\Artist;
 use App\Models\Genre\Genre;
-use app\Models\Tracklist\Tracklist;
-use app\Models\User\User;
+use App\Models\Tracklist\Tracklist;
+use App\Models\User\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,7 +22,7 @@ class Mix extends Model
     ];
 
     public function artist() {
-        return $this->belongsTo(Artist::class);
+        return $this->belongsTo(Artist::class, 'author');
     }
 
     public function genres() {
@@ -35,5 +35,15 @@ class Mix extends Model
 
     public function tracklists() {
         return $this->belongsToMany(Tracklist::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($mix) {
+            $mix->tracklists()->detach();
+            $mix->users()->detach();
+        });
     }
 }
