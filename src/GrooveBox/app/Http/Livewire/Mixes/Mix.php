@@ -41,7 +41,7 @@ class Mix extends Component
 
         $mix->delete();
 
-        $this->redirect('/like');
+        $this->redirect('/artist/'.auth()->user()->artist->id);
     }
 
     public function downloadFile($mixId)
