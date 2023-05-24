@@ -21,8 +21,18 @@ class Artist extends Component
     }
 
     public function mount($artist) {
-        $this->mixes = Mix::where('author', $artist)->paginate(15);
+
         $this->artist = \App\Models\Artist\Artist::find($artist);
+
+        if (auth()->user()->hasArtist()) {
+            if (auth()->user()->artist->id == $artist) {
+                $this->mixes = Mix::where('author', $artist)->paginate(15);
+            } else {
+                $this->mixes = Mix::where('author', $artist)->where('privacy', 0)->paginate(15);
+            }
+        } else {
+            $this->mixes = Mix::where('author', $artist)->where('privacy', 0)->paginate(15);
+        }
     }
 
     public function like($mixId) {
