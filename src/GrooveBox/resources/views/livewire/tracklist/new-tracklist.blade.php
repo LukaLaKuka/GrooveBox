@@ -9,7 +9,7 @@
 
         <div>
         <span class="fs-5">
-            Here you can create your own music to add any mixes as you want!
+            Here you can create your tracklist to add any mixes as you want!
         </span>
         </div>
 
