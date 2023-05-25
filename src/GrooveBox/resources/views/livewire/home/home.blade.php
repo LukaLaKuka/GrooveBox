@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="row my-2 mx-2">
+            <div class="row my-2">
                 @foreach($this->mixes as $mix)
                     <div class="col-3">
                         <div class="card bg-dark rounded mb-3" style="width: 18rem;">
@@ -70,7 +70,7 @@
                 </div>
             </div>
 
-            <div class="row my-2 mx-3">
+            <div class="row my-2">
                 @foreach($this->tracklists as $tracklist)
                     <div class="col-3">
                         <div class="card bg-dark rounded mb-3" style="width: 18rem;">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
 
-                <div class="row my-2 mx-3">
+                <div class="row my-2">
                     @foreach($this->personal_mixes as $mix)
                         <div class="col-3">
                             <div class="card bg-dark rounded mb-3" style="width: 18rem;">
@@ -156,9 +156,9 @@
                     </div>
                 </div>
 
-                <div class="row my-2 mx-3">
+                <div class="row my-2">
                     @foreach($this->personal_tracklists as $tracklist)
-                        <div class="col-3">
+                        <div class="col-3 gap-lg-3">
                             <div class="card bg-dark rounded mb-3" style="width: 18rem;">
                                 <a href="/tracklist/{{$tracklist->id}}">
                                     <img src="{{asset('storage/'.$tracklist->image)}}" class="card-img-top" alt="Image"/>

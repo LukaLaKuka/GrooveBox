@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="row my-2 mx-3">
+            <div class="row my-2">
                 @foreach($this->tracklists as $tracklist)
                     <div class="col-3">
                         <div class="card bg-dark rounded" style="width: 18rem;">
@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="row my-2 mx-3">
+            <div class="row my-2">
                 @foreach($this->artists as $artist)
                     <div class="col-3">
                         <div class="card bg-dark rounded" style="width: 18rem;">
