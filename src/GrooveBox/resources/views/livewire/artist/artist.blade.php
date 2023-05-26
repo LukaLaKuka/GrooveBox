@@ -37,11 +37,15 @@
 
         @if(sizeof($this->mixes) == 0)
             <div class="col d-flex justify-content-center align-items-center flex-column gap-2">
-                @if($this->artist->id == auth()->user()->artist->id)
-                    <span class="fs-5">You don't have any Mix created</span>
-                    <a href="/new-mix" class="p-2 btn-outline-light bg-dark text-decoration-none text-light border-light border rounded fs-5">
-                        Create a Mix
-                    </a>
+                @if(auth()->check())
+                    @if($this->artist->id == auth()->user()->artist->id)
+                        <span class="fs-5">You don't have any Mix created</span>
+                        <a href="/new-mix" class="p-2 btn-outline-light bg-dark text-decoration-none text-light border-light border rounded fs-5">
+                            Create a Mix
+                        </a>
+                    @else
+                        <span class="fs-5">This artist doesn't have any Mix created</span>
+                    @endif
                 @else
                     <span class="fs-5">This artist doesn't have any Mix created</span>
                 @endif
