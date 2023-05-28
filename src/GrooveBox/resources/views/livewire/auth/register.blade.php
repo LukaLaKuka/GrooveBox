@@ -15,7 +15,7 @@
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="John" wire:model="name">
                         @error('name')
-                        <span>{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                         <label for="flastname" class="form-label">First Lastname</label>
                         <input type="text" class="form-control" id="flastname" placeholder="Doe" wire:model="first_lastname">
                         @error('first_lastname')
-                        <span>{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <label for="slastname" class="form-label">Second Lastname</label>
                         <input type="text" class="form-control" id="slastname" placeholder="Macintosh" wire:model="second_lastname">
                         @error('second_lastname')
-                        <span>{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         <label for="email" class="form-label">Email</label>
                         <input type="text" class="form-control" id="email" placeholder="JohnDoe@example.test" wire:model="email">
                         @error('email')
-                        <span>{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="sRtk6X32" wire:model="password">
                         @error('password')
-                        <span>{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" placeholder="JohnDoe777" wire:model="username">
                         @error('username')
-                        <span>{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         <label for="profile-photo" class="form-label">Profile Image</label>
                         <input type="file" class="form-control" id="profile-photo" placeholder="John" wire:model="image">
                         @error('image')
-                        <span>{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                 </div>

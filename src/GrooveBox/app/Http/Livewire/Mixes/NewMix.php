@@ -18,11 +18,21 @@ class NewMix extends Component
         'audio' => 'file|mimetypes:audio/mpeg,audio/wav,audio/midi',
         'image' => 'image|mimes:jpeg,png,gif',
     ];
+
+    /**
+     * Render the component's view
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.mixes.new-mix');
     }
 
+    /**
+     * Stores the new Mix given
+     * @return void
+     * @throws \Exception
+     */
     public function save() {
         $this->validate();
         try {

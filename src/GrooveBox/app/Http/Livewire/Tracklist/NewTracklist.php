@@ -20,11 +20,20 @@ class NewTracklist extends Component
         'privacy' => 'boolean',
         'image' => 'image|mimes:jpeg,png,gif',
     ];
+
+    /**
+     * Render the component's view
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.tracklist.new-tracklist');
     }
 
+    /**
+     * Stores the new Tracklist data
+     * @return never|void
+     */
     public function save() {
         $this->validate();
         try {

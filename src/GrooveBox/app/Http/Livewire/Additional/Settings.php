@@ -22,11 +22,20 @@ class Settings extends Component
         'password' => 'nullable|string|min:6',
         'image' => 'nullable|image',
     ];
+
+    /**
+     * Function to render the view
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.additional.settings');
     }
 
+    /**
+     * Stores the new data given
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function save() {
 
         $this->validate();

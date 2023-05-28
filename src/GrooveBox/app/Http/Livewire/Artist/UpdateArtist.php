@@ -16,11 +16,19 @@ class UpdateArtist extends Component
         'image' => 'nullable|mimes:jpeg,png,gif',
     ];
 
+    /**
+     * Renders the component's View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.artist.update-artist');
     }
 
+    /**
+     * Gets the actual artist
+     * @return void
+     */
     public function mount() {
         $local_artist = auth()->user()->artist;
         $this->artist_name = $local_artist->artist_name;

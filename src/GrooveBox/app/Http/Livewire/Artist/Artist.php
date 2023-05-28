@@ -14,12 +14,21 @@ class Artist extends Component
     protected $paginationTheme = 'bootstrap';
 
     protected $mixes, $artist;
+
+    /**
+     * Function to render the view
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
-
         return view('livewire.artist.artist');
     }
 
+    /**
+     * Gets the Artist's ID from the URL and get all his data.
+     * @param $artist
+     * @return void
+     */
     public function mount($artist) {
 
         $this->artist = \App\Models\Artist\Artist::find($artist);
@@ -35,6 +44,11 @@ class Artist extends Component
         }
     }
 
+    /**
+     * Add the Mix to Likes to the authenticated User
+     * @param $mixId int Mix's ID
+     * @return void
+     */
     public function like($mixId) {
         $this->artist = Mix::find($mixId)->artist;
         $this->mixes = Mix::where('author', $this->artist->id)->paginate(15);
@@ -42,6 +56,11 @@ class Artist extends Component
         auth()->user()->mixes()->attach($mix->id);
     }
 
+    /**
+     * Remove the Mix to Likes to the authenticated User
+     * @param $mixId int Mix's ID
+     * @return void
+     */
     public function dislike($mixId) {
         $this->artist = Mix::find($mixId)->artist;
         $this->mixes = Mix::where('author', $this->artist->id)->paginate(15);
@@ -49,6 +68,11 @@ class Artist extends Component
         auth()->user()->mixes()->detach($mix->id);
     }
 
+    /**
+     * The Client Downloads the Mix's Audio
+     * @param $mixId int Mix's ID
+     * @return \Symfony\Component\HttpFoundation\StreamedResponse
+     */
     public function downloadFile($mixId)
     {
         $this->artist = Mix::find($mixId)->artist;

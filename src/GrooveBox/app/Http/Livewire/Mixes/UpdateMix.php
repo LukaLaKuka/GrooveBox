@@ -20,10 +20,19 @@ class UpdateMix extends Component
     public $description;
     public $privacy = 0;
 
+    /**
+     * Get the mix's ID
+     * @param $mixId int Mix's ID
+     * @return void
+     */
     public function mount($mixId) {
         $this->mixId = $mixId;
     }
 
+    /**
+     * Stores the new data of the Mix
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function save() {
 
         $this->validate();
@@ -48,6 +57,11 @@ class UpdateMix extends Component
 
         return redirect('/mix/'.$mix->id);
     }
+
+    /**
+     * Render the component's view
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.mixes.update-mix');

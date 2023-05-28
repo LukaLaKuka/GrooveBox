@@ -16,11 +16,20 @@ class NewArtist extends Component
         'artist_name' => 'required|string',
         'image' => 'image|mimes:jpeg,png,gif',
     ];
+
+    /**
+     * Renders the component's view
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.artist.new-artist');
     }
 
+    /**
+     * Checks if this user has artist or not
+     * @return void
+     */
     public function mount() {
         if (auth()->user()->hasArtist()) {
             redirect('/artist/'.auth()->user()->artist->id);

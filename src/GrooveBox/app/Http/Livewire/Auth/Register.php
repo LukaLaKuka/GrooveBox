@@ -24,17 +24,29 @@ class Register extends Component
         'image' => 'required|image|mimes:jpeg,png,jpg,gif', // Cambia 'required' a 'nullable'
     ];
 
+    /**
+     * Checks if the user is authenticated
+     * @return void
+     */
     public function mount() {
         if (auth()->check()) {
             redirect('/home');
         }
     }
 
+    /**
+     * Renders the Component's View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.auth.register');
     }
 
+    /**
+     * Does the registration proccess
+     * @return Exception|\Exception|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function register() {
 
         $this->validate();

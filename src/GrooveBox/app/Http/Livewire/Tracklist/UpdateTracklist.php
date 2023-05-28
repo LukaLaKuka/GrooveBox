@@ -19,11 +19,20 @@ class UpdateTracklist extends Component
         'image' => 'nullable|image|mimes:jpeg,png,gif',
     ];
 
+    /**
+     * Render the component's view
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function render()
     {
         return view('livewire.tracklist.update-tracklist');
     }
 
+    /**
+     * Get the actual tracklist
+     * @param $tracklistId
+     * @return void
+     */
     public function mount($tracklistId) {
         $this->tracklist = Tracklist::find($tracklistId);
 
@@ -32,6 +41,10 @@ class UpdateTracklist extends Component
         }
     }
 
+    /**
+     * Stores the new tracklist's data
+     * @return never|void
+     */
     public function save() {
         $this->validate();
         try {
