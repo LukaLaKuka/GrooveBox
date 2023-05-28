@@ -39,7 +39,7 @@
 
             <div class="row my-2">
                 <div class="col d-flex justify-content-center">
-                    <button class="btn btn-primary btn-lg w-25">Create Artist</button>
+                    <button class="btn btn-primary btn-lg w-25">Update Artist</button>
                 </div>
             </div>
         </form>
