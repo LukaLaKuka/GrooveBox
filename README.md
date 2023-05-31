@@ -12,5 +12,9 @@ new mixes, making easier for artists to find inspiration and the perfect tracks 
 ## Índice
 
 - [Anteproyecto](./doc/es/anteproyecto.md)
+- [Casos de Uso](./doc/es/casosDeUso.md)
+- [Entidad Relación](./doc/es/E-R.md)
+- [Diagrama de clases](./doc/es/clases.md)
+- [Despliegue](./doc/es/deploy.md)
 
 </div>
