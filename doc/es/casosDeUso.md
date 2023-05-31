@@ -20,25 +20,15 @@ Aquí podrás el diagrama de los casos de uso y además la documentación de sus
 
 ### Actores
 
-| Actor           | Usuario Plataforma Web                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Descripción     | Usuario consumidor de la plataforma web                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Características | No tiene privilegios más allá de lo que él introduzca o se le sea compartido en la aplicación                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Relaciones      | Consumidor API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Referencias     | Iniciar sesión, Crear cuenta, Recuperar Cuenta, Guardar Mezcla a Tracklist, Eliminar Mezcla de Tracklist, Solicitar Token, Gestionar Tracklist, Eliminar Tracklist, Descargar Tracklist, Modificar Tracklist, Crear Tracklist, Escuchar Tracklist, Compartir Tracklist, Buscar Tracklist, Escuchar Mezcla, Elegir Mezcla, Elegir Tracklist, Gestionar Mezcla, Eliminar Mezcla, Actualizar Mezcla, Guardar Mezcla a Favoritos, Publicar Mezcla, Descargar Mezcla, Eliminar Mezcla de Favoritos |
-| Notas           | ---                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 
-| Autor           | [Tomhuel](https://github.com/Tomhuel)                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Fecha           | 09/03/2023                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 
-
-| Actor           | Consumidor API                                                                                                                                                                                                                                                                                      |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Descripción     | Usuario/Entidad consumidora de la API REST                                                                                                                                                                                                                                                          |
-| Características | No puede crear ni eliminar usuarios ni listas de favoritos. Para poder hacer cualquier acción en un usuario, requiere el token de este usuario.                                                                                                                                                     |
-| Relaciones      | Usuario Plataforma Web                                                                                                                                                                                                                                                                              |
-| Referencias     | GET, PUT, DELETE, POST, PATCH, GET Tracklist, GET Mezcla, GET User, GET Favoritos, DELETE Tracklist, DELETE Mezcla PUT Mezcla, PUT Tracklist, PUT Mezcla, PUT Favoritos, POST Tracklist, POST Mezcla, PATCH Tracklist, PATCH Mezcla, PATCH User, PATCH Favoritos, Autenticar Token, Solicitar Token |
-| Notas           | Centrado para empresas u otras entidades que administren los datos de los Usuarios                                                                                                                                                                                                                  | 
-| Autor           | [Tomhuel](https://github.com/Tomhuel)                                                                                                                                                                                                                                                               |
-| Fecha           | 09/03/2023                                                                                                                                                                                                                                                                                          | 
+| Actor           | Usuario Plataforma Web                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Descripción     | Usuario consumidor de la plataforma web                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Características | No tiene privilegios más allá de lo que él introduzca o se le sea compartido en la aplicación                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Relaciones      | Consumidor API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Referencias     | Iniciar sesión, Crear cuenta, Descargar Mezcla, Escuchar Mezcla, Elegir Mezcla, Gestionar Mezcla, Eliminar Mezcla, Actualizar Mezcla, Guardar Mezcla a Favoritos, Eliminar Mezcla de Favoritos, Publicar Mezcla, Guardar Mezcla ---Tracklist, Eliminar Mezcla de Tracklist, Gestionar Perfil Artista, Modificar Perfil Artista, Crear Perfil Artista, Gestionar Tracklist, Eliminar Tracklist, Modificar Tracklist, Crear Tracklist, Escuchar Tracklist, Compartir Tracklist, Buscar Tracklist, Elegir Tracklist |
+| Notas           | ---                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 
+| Autor           | [Tomhuel](https://github.com/Tomhuel)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Fecha           | 09/03/2023                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 </div>
 
@@ -46,315 +36,360 @@ Aquí podrás el diagrama de los casos de uso y además la documentación de sus
 
 | Caso de Uso      | Iniciar sesión                        |
 |------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
+| Fuentes          | ---                                   |
 | Actor            | Usuario Plataforma Web                |
-| Descripción      | Inicia sesión en la plataforma web    |
+| Descripción      | Inicia la sesión en la Web            |
 | Flujo Básico     | ---                                   |
 | Pre-Condiciones  | ---                                   |
-| Post-Condiciones | ---                                   |
+| Post-condiciones | ---                                   |
 | Requerimientos   | Tener cuenta creada                   |
-| Notas            | ---                                   | 
+| Notas            | ---                                   |
 | Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
+| Fecha            | 30/05/2023                            |
+
+
 
 | Caso de Uso      | Crear cuenta                          |
 |------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
+| Fuentes          | ---                                   |
 | Actor            | Usuario Plataforma Web                |
-| Descripción      | Crea una cuenta en la plataforma web  |
+| Descripción      | Crea una cuenta en la web             |
 | Flujo Básico     | ---                                   |
 | Pre-Condiciones  | ---                                   |
-| Post-Condiciones | ---                                   |
+| Post-condiciones | ---                                   |
 | Requerimientos   | ---                                   |
-| Notas            | ---                                   | 
+| Notas            | ---                                   |
 | Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
+| Fecha            | 30/05/2023                            |
 
-| Caso de Uso      | Recuperar cuenta                                 |
-|------------------|--------------------------------------------------|
-| Fuentes          | ---                                              | 
-| Actor            | Usuario Plataforma Web                           |
-| Descripción      | Recuperación de la cuenta vía correo electrónico |
-| Flujo Básico     | ---                                              |
-| Pre-Condiciones  | ---                                              |
-| Post-Condiciones | ---                                              |
-| Requerimientos   | Tener cuenta creada                              |
-| Notas            | ---                                              | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel)            |
-| Fecha            | 09/03/2023                                       |
 
-| Caso de Uso      | Guardar Mezcla a Tracklist            |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Guarda una Mezcla en una Tracklist    |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Elegir Mezcla y Tracklist             |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Eliminar Mezcla de Tracklist          |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Elegir Mezcla y Tracklist             |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Solicitar Token                       |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión                        |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Gestionar Tracklist                                                                                                             |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Fuentes          | ---                                                                                                                             | 
-| Actor            | Usuario Plataforma Web                                                                                                          |
-| Descripción      | Descripción                                                                                                                     |
-| Flujo Básico     | ---                                                                                                                             |
-| Pre-Condiciones  | Iniciar sesión                                                                                                                  |
-| Post-Condiciones | Eliminar Mezcla, Actualizar Mezcla, Guardar Mezcla a Favoritos, Descargar Mezcla, Eliminar Mezcla de Favoritos, Publicar Mezcla |
-| Requerimientos   | Tener sesión iniciada                                                                                                           |
-| Notas            | ---                                                                                                                             | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel)                                                                                           |
-| Fecha            | 09/03/2023                                                                                                                      |
-
-| Caso de Uso      | Eliminar Tracklist                    |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Tracklist      |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Descargar Tracklist                   |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Tracklist      |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Modificar Tracklist                   |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Tracklist      |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Crear Tracklist                       |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Tracklist      |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Escuchar Tracklist                    |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Tracklist      |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Compartir Tracklist                   |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Tracklist      |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Buscar Tracklist                      |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión                        |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Escuchar Mezcla                       |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Mezcla         |
-| Post-Condiciones | ---                                   |
-| Requerimientos   |                                       |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Elegir Mezcla                         |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión                        |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Elegir Tracklist                      |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | ---                                   |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Gestionar Mezcla                      |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión                        |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Eliminar Mezcla                       |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Mezcla         |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Actualizar Mezcla                     |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Mezcla         |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Guardar Mezcla a Favoritos            |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Mezcla         |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
-
-| Caso de Uso      | Publicar Mezcla                       |
-|------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
-| Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
-| Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión                        |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
-| Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
 
 | Caso de Uso      | Descargar Mezcla                      |
 |------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
+| Fuentes          | ---                                   |
 | Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
+| Descripción      | Descarga el audio de la mezcla        |
 | Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Mezcla         |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
+| Pre-Condiciones  | Elegir la mezcla                      |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
 | Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Escuchar Mezcla                       |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Se escucha la mezcla                  |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir la mezcla                      |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Elegir Mezcla                         |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Elige una mezcla de la plataforma     |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | ---                                   |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Gestionar Mezcla                                                                                                                |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| Fuentes          | ---                                                                                                                             |
+| Actor            | Usuario Plataforma Web                                                                                                          |
+| Descripción      | Permite gestionar una mezcla                                                                                                    |
+| Flujo Básico     | ---                                                                                                                             |
+| Pre-Condiciones  | ---                                                                                                                             |
+| Post-condiciones | Eliminar Mezcla, Actualizar Mezcla, Guardar Mezcla a Favoritos, Descargar Mezcla, Eliminar Mezcla de Favoritos, Publicar Mezcla |
+| Requerimientos   | Tener un perfil de artista creado                                                                                               |
+| Notas            | ---                                                                                                                             |
+| Autor            | [Tomhuel](https://github.com/Tomhuel)                                                                                           |
+| Fecha            | 30/05/2023                                                                                                                      |
+
+
+
+| Caso de Uso      | Eliminar Mezcla                       |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Elimina una mezcla de la plataforma   |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Eligir una Mezcla                     |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Actualizar Mezcla                     |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Actualiza los datos de una mezcla     |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir una mezcla                     |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Guardar Mezcla a Favoritos            |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Guardar una mezcla a favoritos        |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir una mezcla                     |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
 
 | Caso de Uso      | Eliminar Mezcla de Favoritos          |
 |------------------|---------------------------------------|
-| Fuentes          | ---                                   | 
+| Fuentes          | ---                                   |
 | Actor            | Usuario Plataforma Web                |
-| Descripción      | Descripción                           |
+| Descripción      | Elimina una mezcla de favoritos       |
 | Flujo Básico     | ---                                   |
-| Pre-Condiciones  | Iniciar sesión, Elegir Mezcla         |
-| Post-Condiciones | ---                                   |
-| Requerimientos   | Tener sesión iniciada                 |
-| Notas            | ---                                   | 
+| Pre-Condiciones  | Elegir una mezcla                     |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
 | Autor            | [Tomhuel](https://github.com/Tomhuel) |
-| Fecha            | 09/03/2023                            |
+| Fecha            | 30/05/2023                            |
 
+
+
+| Caso de Uso      | Publicar Mezcla                       |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Publica una mezcla en la plataforma   |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | ---                                   |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Guardar Mezcla a Tracklist            |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Guarda una mezcla en una tracklist    |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir Mezcla                         |
+| Post-condiciones | ---                                   |
+| Requerimientos   | Tener tracklists                      |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Eliminar Mezcla de Tracklist          |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Elimina una mezcla de una tracklist   |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir Mezcla, Tener Tracklist        |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Gestionar Perfil Artista                 |
+|------------------|------------------------------------------|
+| Fuentes          | ---                                      |
+| Actor            | Usuario Plataforma Web                   |
+| Descripción      | El usuario gestiona su perfil de Artista |
+| Flujo Básico     | ---                                      |
+| Pre-Condiciones  | ---                                      |
+| Post-condiciones | ---                                      |
+| Requerimientos   | ---                                      |
+| Notas            | ---                                      |
+| Autor            | [Tomhuel](https://github.com/Tomhuel)    |
+| Fecha            | 30/05/2023                               |
+
+
+
+| Caso de Uso      | Modificar Perfil Artista                  |
+|------------------|-------------------------------------------|
+| Fuentes          | ---                                       |
+| Actor            | Usuario Plataforma Web                    |
+| Descripción      | Modifica el perfil de artista del usuario |
+| Flujo Básico     | ---                                       |
+| Pre-Condiciones  | Tiene un perfil de artista creado         |
+| Post-condiciones | ---                                       |
+| Requerimientos   | ---                                       |
+| Notas            | ---                                       |
+| Autor            | [Tomhuel](https://github.com/Tomhuel)     |
+| Fecha            | 30/05/2023                                |
+
+
+
+| Caso de Uso      | Crear Perfil Artista                  |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Crea su perfil de artista             |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | ---                                   |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Gestionar Tracklist                   |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Gestiona una Tracklist                |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | ---                                   |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Eliminar Tracklist                    |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Elimina una Tracklist                 |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir Tracklist                      |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Modificar Tracklist                   |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Modifica los datos de la Tracklist    |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir Tracklist                      |
+| Post-condiciones | ---                                   |
+| Requerimientos   | Iniciar sesión                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Crear Tracklist                       |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Crea una Tracklist                    |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | ---                                   |
+| Post-condiciones | ---                                   |
+| Requerimientos   | Iniciar sesión                        |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Escuchar Tracklist                    |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Escucha las mezclas de una Tracklist  |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | Elegir Tracklist                      |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Compartir Tracklist                     |
+|------------------|-----------------------------------------|
+| Fuentes          | ---                                     |
+| Actor            | Usuario Plataforma Web                  |
+| Descripción      | Comparte la Tracklist de manera pública |
+| Flujo Básico     | ---                                     |
+| Pre-Condiciones  | Elegir Tracklist                        |
+| Post-condiciones | ---                                     |
+| Requerimientos   | ---                                     |
+| Notas            | ---                                     |
+| Autor            | [Tomhuel](https://github.com/Tomhuel)   |
+| Fecha            | 30/05/2023                              |
+
+
+
+| Caso de Uso      | Buscar Tracklist                      |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Busca una Tracklist                   |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | ---                                   |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
+
+
+
+| Caso de Uso      | Elegir Tracklist                      |
+|------------------|---------------------------------------|
+| Fuentes          | ---                                   |
+| Actor            | Usuario Plataforma Web                |
+| Descripción      | Elige una Tracklist                   |
+| Flujo Básico     | ---                                   |
+| Pre-Condiciones  | ---                                   |
+| Post-condiciones | ---                                   |
+| Requerimientos   | ---                                   |
+| Notas            | ---                                   |
+| Autor            | [Tomhuel](https://github.com/Tomhuel) |
+| Fecha            | 30/05/2023                            |
 
 </div>
