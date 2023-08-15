@@ -19,6 +19,7 @@ Las dependencias de GrooveBox son:
 - MariaDB (el servidor es Debian, por lo que para instalar MySQL hay que tener instalado MariaDB)
 - MySQL
 - CertBot
+- NodeJS
 - módulos de PHP:
   - bcmath.ini    
   - ftp.ini       
