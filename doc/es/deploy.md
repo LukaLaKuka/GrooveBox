@@ -66,7 +66,7 @@ Lo primero sería hacer un `git clone` de nuestro repositorio GrooveBox.
 
 Tras clonarnos el proyecto accedemos al directorio del [proyecto de Laravel](../../src/GrooveBox) y hacemos los siguientes comandos:
 
-```
+```bash
 # Instalamos dependencias del proyecto de Laravel:
 composer install
 
@@ -79,7 +79,7 @@ Ahora tendríamos que asegurarnos migrar la base de datos en [Configuración MyS
 
 Limpiamos la caché de la configuración y vistas:
 
-```
+```bash
 php artisan config:cache
 
 php artisan view:cache
@@ -89,7 +89,7 @@ sudo php artisan cache:clear
 
 Y configuramos los permisos de las carpetas de storage y cache
 
-```
+```bash
     # Permisos para guardar y leer imágenes
     sudo chmod -R 755 storage
 
@@ -100,7 +100,7 @@ Y configuramos los permisos de las carpetas de storage y cache
 
 Preparamos el entorno de producción:
 
-```
+```bash
 # Preparamos el entorno de Laravel para correr en modo producción
 
 npm run prod
@@ -110,19 +110,19 @@ npm run prod
 
 Accedemos a MySQL con el usuario Root:
 
-```
+```bash
 sudo mysql -u root -p
 ```
 
 y creamos la base de datos que vamos a usar:
 
-```
+```mysql
 CREATE DATABASE GrooveBox;
 ```
 
 y creamos un usuario para esta base de datos y le damos permisos:
 
-```
+```mysql
 # Creación usuario
 
 CREATE USER 'GrooveBox'@'localhost' IDENTIFIED BY 'contraseña';
@@ -136,7 +136,7 @@ FLUSH PRIVILEGES;
 
 A continuación deberíamos configurarnos nuestro archivo `.env` para tener nuestra conexión con la BBDD configurada:
 
-```
+```.env
 APP_NAME=GrooveBox
 APP_ENV=production
 APP_KEY=base64:2A+gO+Q34NIJlbdKv97sDXCeoisusjSnGg1vvWvmQ+A=
@@ -176,17 +176,6 @@ MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS=null
 MAIL_FROM_NAME="${APP_NAME}"
 
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_DEFAULT_REGION=us-east-1
-AWS_BUCKET=
-AWS_USE_PATH_STYLE_ENDPOINT=false
-
-PUSHER_APP_ID=
-PUSHER_APP_KEY=
-PUSHER_APP_SECRET=
-PUSHER_APP_CLUSTER=mt1
-
 MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
@@ -204,7 +193,7 @@ Y con esto nuestra BBDD ya estaría configurada, sin necesidad de tener ningún 
 
 Creamos en el directorio `/etc/nginx/conf.d/` un fichero `.conf` en el que configuraremos la ruta y configuración de la app:
 
-```
+```yaml
 server {
     # Tiene que coincidir con la url que hemos configurado en el .env de Laravel
     server_name groovebox.alu7410.arkania.es;
@@ -252,7 +241,7 @@ server {
 
 Y para terminar de configurar el servidor, ya solo ejecutamos el programa de CertBot para añadir la certificación de SSL en nuestra web:
 
-```
+```bash
 sudo certbot --nginx
 ```
 
