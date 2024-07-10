@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="{{ url('assets/images/Groove.ico') }}" rel='shortcut icon' type="image/x-icon" />
     <!-- Bootstrap CSS -->
-    <link href='{{asset('css/styles.css')}}' rel='stylesheet' type="text/css">
+    <link href='{{asset('css/app.css')}}' rel='stylesheet' type="text/css">
     @livewireStyles
     <title>@yield('title')</title>
 </head>
